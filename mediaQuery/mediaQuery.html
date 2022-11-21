@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .caixa-pai{
+        width: 700px;
+        height: 300px;
+        background-color: aqua;
+        display: flex;
+        gap: 1rem;
+    }
+    .caixa-filha{
+        background-color: coral;
+        width: 33%;
+        margin-bottom: 1rem;
+    }
+    @media screen and (max-width:500px){
+        .caixa-pai{
+            flex-direction: column;
+        }
+        .caixa-filha{
+            width: 100%;
+            background-color: blue;
+        }
+    }
+    @media screen and (max-width:300px){
+        .caixa-pai{
+            background-color: darkorange;
+            flex-direction: inherit;
+        }
+        .caixa-filha{
+            background-color: purple;
+        }
+    }
+</style>
+<body>
+    <div class="caixa-pai">
+        <div class="caixa-filha">1</div>
+        <div class="caixa-filha">2</div>
+        <div class="caixa-filha">3</div>
+    </div>
+</body>
+</html>
